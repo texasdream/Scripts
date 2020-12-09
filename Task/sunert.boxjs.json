@@ -137,7 +137,7 @@
     {
       "id": "moji",
       "name": "墨迹天气",
-      "keys": ["city","citynum"],
+      "keys": ["city","citynum","cut","day_desc","hour_desc","index_desc"],
       "settings": [{ 
          "id": "city", 
          "name": "城市", 
@@ -146,20 +146,37 @@
          "desc": "请填写中文地区"
          },
          {
-          "id": "cut",
-          "name": "精简模式",
-          "val": true,
-          "type": "boolean",
-          "desc": "取消详情描述，默认打开"
-         },
-         {
           "id": "citynum",
           "name": "城市序号",
           "val": "",
           "type": "number",
           "placeholder": "默认1 (点击以展开说明)",
           "desc": "选择地区，请填写日志内冒号前的数字序号"
-        }],
+          },
+          {
+          "id": "cut",
+          "name": "精简日志模式",
+          "val": true,
+          "type": "boolean",
+          "desc": "取消详情描述，默认打开"
+          },
+          {
+          "id": "weatherapi",
+          "name": "天气接口",
+          "val": "",
+          "type": "checkboxes",
+          "desc": "",
+          "items": [{
+            "key": "day_desc",
+            "label": "每日天气"
+            },
+            "key": "day_desc",
+            "label": "小时天气"
+            },
+            "key": "index_desc",
+            "label": "生活指数"
+           }]
+        ],
       "author": "@sunert",
       "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/moji.js",
       "icons": ["https://gitee.com/Sunert/ProxyConfig/raw/master/QuantumultX/Rules/Images/ICON/moji_mini.png", "https://gitee.com/Sunert/ProxyConfig/raw/master/QuantumultX/Rules/Images/ICON/moji.png"],
